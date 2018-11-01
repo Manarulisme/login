@@ -2,7 +2,7 @@
 //Model_data.php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-Class Form_isi_Model extends CI_Model{
+Class Model_data extends CI_Model{
 
 	public function load_karyawan(){
 		$sql = $this->db->query("SELECT * FROM tb_karyawan WHERE flag = 1");

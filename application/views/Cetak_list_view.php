@@ -6,7 +6,7 @@
     <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet">
  <!--    <link href="<?php echo base_url('assets/js/style.js');?>" rel="stylesheet"> -->
   </head>
-  <body style="height: 100%;">
+  <body style="background-color: #f3f3f3; ">
     
     <div class="container-fluid">
                 <!--ACCESS MENUS FOR ADMIN-->
@@ -59,50 +59,27 @@
         <div class="col">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Daftar Alumni</h5>
+              <h5 class="card-title"> Cetak Laporan </h5>
+                
       <div class="table-responsive">
-  <table class="table table-bordered table-striped table-hover">
+  <table class="table table-bordered table-striped table-hover" style="width: 70%;">
     <thead>
       <tr style="text-align: center;">
-        <th>No.</th>
-        <th>Foto</th>
-        <th>Nama</th>
-        <th>Jenis Kelamin</th>
-        <th>Alamat</th>
-        <th>Lulusan</th>
-        <th>Pekerjaan</th>
-        <th>Kontak HP</th>
-        <th>Email</th>
-        <th>Aksi</th>
+        <th width="300px">Jenis Cetakan</th>
+        <th width="50px">Aksi</th>
       </tr>
     </thead>
     <tbody>
       <!-- ISI DATA AKAN MUNCUL DISINI -->
-      <?php
-      $no = 1; //untuk menampilkan no
-      foreach($list_alumni as $row){
-      
-        echo "
-        <tr>
-          <td>$no</td>
-          <td>$row[foto]</td>
-          <td>$row[nama_lengkap]</td>
-          <td>$row[jk]</td>
-          <td>$row[alamat]</td>
-          <td>$row[lulusan]</td>
-          <td>$row[pekerjaan]</td>
-          <td>$row[kontak_hp]</td>
-          <td>$row[email]</td>
+    
 
-          <td>
-            <a href='page/edit/$row[id]' class='btn btn-sm btn-info'>Update</a>
-            <a href='page/delete/$row[id]' class='btn btn-sm btn-danger'>Hapus</a>
-          </td>
+        <tr>
+          <td>Cetak Semua</td>
+          <td><a href='Cetak/cetak_all' class='btn btn-sm btn-info' align='center'>Cetak</a></td></tr></br>
+        <tr>  
+          <td>Cetak Berdasarkan Jenis Kelamin</td>
+          <td><a href='Cetak/cetak_jk' class='btn btn-sm btn-info'>Cetak</a></td><br>
         </tr>
-        ";
-        $no++;
-      }
-      ?>
     </tbody>
   </table>
 </div>
@@ -211,3 +188,4 @@
     </div>
   </body>
 </html>
+

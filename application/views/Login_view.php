@@ -18,7 +18,7 @@
   <div class="wrapper fadeInDown">
   <div id="formContent" >
   <div class="fadeIn first">
-      <img src="assets/gambar/logo1.png" id="icon" alt="User Icon" />
+      <img src="<?php echo base_url(); ?>assets/gambar/logo1.png"  id="icon" alt="User Icon" >
       <h1>IKLIMA</h1>
     </div>
        <div class="col-md-auto col-md-offset-4">
@@ -26,12 +26,12 @@
            <h2 class="form-signin-heading">Silahkan Login</h2>
            <?php echo $this->session->flashdata('msg');?>
            <label for="username" class="sr-only">Username</label>
-           <input type="email" name="email" class="form-control" placeholder="Email" required autofocus>
+           <input type="email" name="email" class="form-control" placeholder="Email" required autofocus style="margin: 3% auto;">
            <label for="password" class="sr-only">Password</label>
-           <input type="password" name="password" class="form-control" placeholder="Password" required>
+           <input type="password" name="password" class="form-control" placeholder="Password" required style="margin: 3% auto;">
            <div class="checkbox">
              <label>
-               <input type="checkbox" value="remember-me"> Ingat Saya
+               <input type="checkbox" value="remember-me" required autofocus> Ingat Saya
              </label>
            </div>
            <button class="btn btn-lg btn-primary btn-block" type="submit">Masuk</button>

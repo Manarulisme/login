@@ -13,7 +13,7 @@
           <div class="card">
             <div class="card-body">
                 <p>
-	<form class="form-horizontal" style="align-content: center;">
+	<form method="post" class="form-horizontal" style="align-content: center;">
 	<fieldset>
 
 	<!-- Form Name -->
@@ -21,29 +21,30 @@
 
 	<!-- Text input-->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="nama">Nama Lengkap</label>  
+	  <label class="col-md-4 control-label" for="nama_lengkap">Nama Lengkap</label>  
 	  <div class="col-md-4">
-	  <input id="nama" name="nama" type="text" placeholder="" class="form-control input-md">
+	  <input id="nama_lengkap" name="nama_lengkap" type="text" placeholder="" class="form-control input-md" value="<?= isset($default['nama_lengkap'])$default['nama_lengkap']: "" ?>">
 	  <span class="help-block">Sesuai Ijazah</span>  
 	  </div>
 	</div>
 
 	<!-- Select Basic -->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="selectbasic">Jenis Kelamin</label>
+	  <label class="col-md-4 control-label" for="jk">Jenis Kelamin</label>
 	  <div class="col-md-4">
-	    <select id="selectbasic" name="selectbasic" class="form-control">
+	    <select id="jk" name="jk" class="form-control">
 	      <option value="1">Laki - laki</option>
 	      <option value="2">Perempuan</option>
+	      <?=isset($default['jk'])? $default['jk'] : ""?>
 	    </select>
 	  </div>
 	</div>
 
 	<!-- Text input-->
 	<div class="form-group">
-	  <label class="col-md-4 control-label" for="Alamat">Alamat Lengkap </label>  
+	  <label class="col-md-4 control-label" for="alamat">Alamat Lengkap </label>  
 	  <div class="col-md-4">
-	  <input id="Alamat" name="Alamat" type="text" placeholder="Alamat Sekarang" class="form-control input-md">
+	  <input id="alamat" name="alamat" type="text" placeholder="Alamat Sekarang" class="form-control input-md" value="<?=isset($default['alamat'])? $default['alamat'] : ""?>">
 	    
 	  </div>
 	</div>
@@ -52,7 +53,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="lulusan">Lulusan</label>  
 	  <div class="col-md-4">
-	  <input id="lulusan" name="lulusan" type="text" placeholder="Tahun lulus" class="form-control input-md">
+	  <input id="lulusan" name="lulusan" type="text" placeholder="Tahun lulus" class="form-control input-md" value="<?=isset($default['lulusan'])? $default['lulusan'] : ""?>">
 	    
 	  </div>
 	</div>
@@ -61,7 +62,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="pekerjaan">Pekerjaan</label>  
 	  <div class="col-md-4">
-	  <input id="pekerjaan" name="pekerjaan" type="text" placeholder="Pekerjaan" class="form-control input-md">
+	  <input id="pekerjaan" name="pekerjaan" type="text" placeholder="Pekerjaan" class="form-control input-md" value="<?=isset($default['pekerjaan'])? $default['pekerjaan'] : ""?>">
 	  <span class="help-block">Isi dengan (-) bagi yang belum bekerja</span>  
 	  </div>
 	</div>
@@ -72,7 +73,7 @@
 	  <div class="col-md-4">
 	    <div class="input-group">
 	      <span class="input-group-addon">+62</span>
-	      <input id="prependedtext" name="prependedtext" class="form-control" placeholder="Nomor Aktif" type="text">
+	      <input id="prependedtext" name="kontak_hp" class="form-control" placeholder="Nomor Aktif" type="text" value="<?=isset($default['kontak_hp'])? $default['kontak_hp'] : ""?>">
 	    </div>
 	    
 	  </div>
@@ -82,7 +83,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="email">Email</label>  
 	  <div class="col-md-4">
-	  <input id="email" name="email" type="text" placeholder="Email Aktif" class="form-control input-md">
+	  <input id="email" name="email" type="text" placeholder="Email Aktif" class="form-control input-md"<?=isset($default['email'])? $default['email'] : ""?>>
 	    
 	  </div>
 	</div>
@@ -91,7 +92,7 @@
 	<div class="form-group">
 	  <label class="col-md-4 control-label" for="foto">Upload Foto</label>
 	  <div class="col-md-4">
-	    <input id="foto" name="foto" class="input-file" type="file">
+	    <input id="foto" name="foto" class="input-file" type="file" <?=isset($default['foto'])? $default['foto'] : ""?>>
 	  </div>
 	</div>
 
@@ -99,8 +100,8 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="button1id"></label>
   <div class="col-md-8">
-    <button id="button1id" name="button1id" class="btn btn-success" type="submit">Simpan</button>
-    <button id="Simpan" name="Simpan" class="btn btn-danger">Batal</button>
+    <button id="button1id" name="tombol_submit" class="btn btn-success" type="submit">Simpan</button>
+    <button id="Simpan" name="tombol_batal" class="btn btn-danger">Batal</button>
   </div>
 </div>
 
